@@ -30,10 +30,10 @@ export const TodoList = (props: TodoListProps) => {
 
   const renderItems = (items: Array<Task>) => {
     const filteredItems = !includeCompleted
-      ? items.filter((item) => !item.completed)
+      ? items?.filter((item) => !item.completed)
       : items;
 
-    return filteredItems.map((item) => {
+    return filteredItems?.map((item) => {
       return (
         <Col key={item.id}>
           <TaskCard 
